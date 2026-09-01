@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: "1.11"
+      - uses: julia-actions/cache@v2
+      - name: Instantiate pinned environment
+        run: julia --project=. -e 'using Pkg; Pkg.instantiate()'
+      - name: Regression tests (truth, counter, sanity)
+        run: julia --project=. -t 2 experiments/tests/runtests.jl
+        env:
+          # Subset keeps CI under the timeout; the full suite runs locally.
+          EXP_TESTS_PROBLEMS: "mvn,funnel,shell"

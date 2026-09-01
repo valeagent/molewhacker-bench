@@ -1,0 +1,7 @@
+# Funnel logZ — quadrature resolution audit (Protocol §11.5)
+d = 5  L = 10.0
+logZ (n_grid =  4096)    = -15.083452419013
+logZ (n_grid = 32768)    = -15.083452417772
+logZ (QuadGK rtol=1e-12) = -15.083452417752
+Δ(4096 -> 32768)         = +1.241238e-09
+Δ(4096 -> QuadGK)        = +1.260927e-09

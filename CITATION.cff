@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this benchmark suite, please cite the thesis (see preferred-citation)."
+title: "molewhacker-bench"
+type: software
+authors:
+  - family-names: Reindel
+    given-names: Valentin
+    email: valentin.reindel@gmail.com
+    affiliation: "Technical University of Munich, Department of Physics"
+license: MIT
+repository-code: "https://github.com/valeagent/molewhacker-bench"
+preferred-citation:
+  type: thesis
+  title: "Importance Sampling Methods in the Bayesian Analysis Toolkit"
+  authors:
+    - family-names: Reindel
+      given-names: Valentin
+  institution:
+    name: "Technical University of Munich, Department of Physics"
+  year: 2026
+  thesis-type: "Master's thesis"

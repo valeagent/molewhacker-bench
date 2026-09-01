@@ -1,0 +1,17 @@
+# Raw run data and truth sets: archived on Zenodo, regenerable by script
+experiments/out/runs/
+experiments/out/runs_storyboard/
+experiments/out/truth/
+experiments/out/sanity/
+*.h5
+*.jld2
+
+# Julia coverage / local artifacts
+*.jl.cov
+*.jl.mem
+LocalPreferences.toml
+
+# Logs and OS debris
+*.log
+Thumbs.db
+.DS_Store
