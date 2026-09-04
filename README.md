@@ -106,7 +106,13 @@ julia --project=. -t auto experiments/tests/runtests.jl
 
 ### Verification status
 
-This exact tree was verified end to end before publication:
+The initial release tree was verified end to end before publication
+(the checks below). Later commits added figure generators and figure
+outputs (angle/calibration heatmaps, iteration- and
+accuracy-convergence figures, the master results table) that were
+each produced *by the shipped scripts inside this tree* at the time
+of their commit; the raw data (`cells.csv`, runs, truth) is unchanged
+since the verification.
 
 * `Pkg.instantiate()` from the pinned Manifest plus the full
   regression suite pass (truth self-consistency 42/42, truth vs.
