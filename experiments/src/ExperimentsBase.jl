@@ -6,7 +6,8 @@
 # =============================================================================
 #
 # Implements the benchmark protocol specified in the thesis (Ch. 7,
-# with the source listings reproduced in Appendix C). Loading order:
+# with the source listings reproduced in the implementation appendix).
+# Loading order:
 #
 #     1.  counter.jl                -- LikelihoodCounter
 #     2.  shared utilities          -- MethodResult, logsumexp, weighted helpers

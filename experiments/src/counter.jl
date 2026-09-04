@@ -18,7 +18,7 @@
 # Cumulative cost  cost(c) = c.n_primal + c.n_grad_partials.
 #
 # Reference: the cost-accounting contract of the thesis (Ch. 7; the
-# counter listing is reproduced in Appendix C).
+# counter listing is reproduced in the implementation appendix).
 
 using ForwardDiff
 using DensityInterface

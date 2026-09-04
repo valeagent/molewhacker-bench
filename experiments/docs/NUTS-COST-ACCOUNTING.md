@@ -11,7 +11,7 @@ See LICENSE at the repository root for the full MIT license text.
 `BAT.HamiltonianMC` → AdvancedHMC.jl) on the common cost axis, why the naive
 likelihood-call counter under-counts it, what was tried, the method actually
 used, and how it is validated. This file is written to be read directly into
-the thesis (benchmark-design cost section + Appendix C).
+the thesis (benchmark-design cost section + the implementation appendix).
 
 Code: [`experiments/src/algorithms/algo_nuts.jl`](../src/algorithms/algo_nuts.jl),
 [`experiments/src/counter.jl`](../src/counter.jl).

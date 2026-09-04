@@ -203,7 +203,7 @@ derivations, metric definitions, protocol, and all conclusions — is
 specified in the thesis (Ch. 7 "Benchmark Design and Test Problems",
 Ch. 8 "Results", Appendices A–C). Source-code listings of every
 target, algorithm invocation, metric helper, and the grid runner are
-reproduced in thesis Appendix C and correspond line-for-line to the
+reproduced in the thesis's implementation appendix and correspond line-for-line to the
 files in this repository. Comments of the form `Protocol §n` refer to
 the benchmark protocol as specified in thesis Ch. 7; comments tagged
 `V2-FIX-*` … `V8-FIX-*` record internal revision milestones of the
