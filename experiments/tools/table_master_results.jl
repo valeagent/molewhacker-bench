@@ -69,7 +69,8 @@ function main()
         "distance; median absolute log-evidence error " *
         "\\(|\\Delta\\log\\evidence|\\) (evidence-aware algorithms " *
         "only); median absolute quantile error at the median and at " *
-        "the \\(97.5\\,\\%\\) level (coordinate-averaged, " *
+        "the \\(97.5\\,\\%\\) level (coordinate-averaged absolute " *
+        "deviations in the parameter's own units, smaller is better, " *
         "\\cref{subsec:bench-coverage}; on the multimodal targets the " *
         "central level is ill-conditioned and the outer level is the " *
         "meaningful calibration number, " *
