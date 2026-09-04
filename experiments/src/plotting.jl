@@ -136,6 +136,11 @@ const METRIC_TITLE = Dict{Symbol,LaTeXString}(
     :KL_cube         => L"D_{\mathrm{KL}}(q_T\,\|\,p)",
     :mode_recovery   => L"R(\hat\pi)\;(\text{mode recovery rate})",
     :mmd_rbf         => L"\mathrm{MMD}_{\mathrm{RBF}}\;(\text{kernel discrepancy})",
+    :QE_p025         => L"\mathrm{QE}(0.025)\;(\text{quantile error, }2.5\,\%)",
+    :QE_p160         => L"\mathrm{QE}(0.16)\;(\text{quantile error, }16\,\%)",
+    :QE_p500         => L"\mathrm{QE}(0.5)\;(\text{quantile error, median})",
+    :QE_p840         => L"\mathrm{QE}(0.84)\;(\text{quantile error, }84\,\%)",
+    :QE_p975         => L"\mathrm{QE}(0.975)\;(\text{quantile error, }97.5\,\%)",
 )
 
 const SCORE_LABEL = Dict{Symbol,LaTeXString}(
@@ -146,6 +151,11 @@ const SCORE_LABEL = Dict{Symbol,LaTeXString}(
     :KL_cube         => L"-\log_{10}D_{\mathrm{KL}}\;\;(\text{higher = better})",
     :mode_recovery   => L"R(\hat\pi)\;\;(1.0 = \text{all modes recovered})",
     :mmd_rbf         => L"-\log_{10}\mathrm{MMD}_{\mathrm{RBF}}\;\;(\text{higher = better})",
+    :QE_p025         => L"-\log_{10}\mathrm{QE}\;\;(\text{higher = better calibrated})",
+    :QE_p160         => L"-\log_{10}\mathrm{QE}\;\;(\text{higher = better calibrated})",
+    :QE_p500         => L"-\log_{10}\mathrm{QE}\;\;(\text{higher = better calibrated})",
+    :QE_p840         => L"-\log_{10}\mathrm{QE}\;\;(\text{higher = better calibrated})",
+    :QE_p975         => L"-\log_{10}\mathrm{QE}\;\;(\text{higher = better calibrated})",
 )
 
 

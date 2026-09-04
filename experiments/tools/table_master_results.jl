@@ -58,8 +58,8 @@ function main()
     push!(lines, "% from experiments/out/tables/cells.csv -- do not edit by hand.")
     push!(lines, "\\begingroup")
     push!(lines, "\\scriptsize")
-    push!(lines, "\\setlength{\\tabcolsep}{4.5pt}")
-    push!(lines, "\\begin{longtable}{@{}l c r r r r r@{}}")
+    push!(lines, "\\setlength{\\tabcolsep}{3.5pt}")
+    push!(lines, "\\begin{longtable}{@{}l c r r r r r r r@{}}")
     push!(lines, "\\caption[Master results table.]{Master results table: " *
         "per-cell medians over the admissible seeds for every " *
         "(problem, dimension, budget, algorithm) cell of the benchmark " *
@@ -68,7 +68,13 @@ function main()
         "error \\(\\overline{W}_{1}\\); median sliced Wasserstein " *
         "distance; median absolute log-evidence error " *
         "\\(|\\Delta\\log\\evidence|\\) (evidence-aware algorithms " *
-        "only); median mode-recovery rate (multimodal targets only). " *
+        "only); median absolute quantile error at the median and at " *
+        "the \\(97.5\\,\\%\\) level (coordinate-averaged, " *
+        "\\cref{subsec:bench-coverage}; on the multimodal targets the " *
+        "central level is ill-conditioned and the outer level is the " *
+        "meaningful calibration number, " *
+        "\\cref{sec:bench-results-calibration}); median mode-recovery " *
+        "rate (multimodal targets only). " *
         "``--'' marks metrics that are undefined for the cell; " *
         "\\(0/n\\) rows carry the exclusion reason as a superscript " *
         "(\\textsuperscript{r}: all seeds failed the " *
@@ -76,18 +82,20 @@ function main()
         "budget-infeasible, the minimal honest run exceeds " *
         "\\(1.2\\,\\Nlike\\)).}\\label{tab:master-results}\\\\")
     header = "Algorithm & Seeds & \\(\\eta\\) & \\(\\overline{W}_{1}\\) & " *
-             "SWD & \\(|\\Delta\\log\\evidence|\\) & Recovery \\\\"
+             "SWD & \\(|\\Delta\\log\\evidence|\\) & " *
+             "\\(\\mathrm{QE}(.5)\\) & \\(\\mathrm{QE}(.975)\\) & " *
+             "Recovery \\\\"
     push!(lines, "\\toprule")
     push!(lines, header)
     push!(lines, "\\midrule")
     push!(lines, "\\endfirsthead")
-    push!(lines, "\\multicolumn{7}{@{}l}{\\tablename\\ \\thetable{} (continued)}\\\\")
+    push!(lines, "\\multicolumn{9}{@{}l}{\\tablename\\ \\thetable{} (continued)}\\\\")
     push!(lines, "\\toprule")
     push!(lines, header)
     push!(lines, "\\midrule")
     push!(lines, "\\endhead")
     push!(lines, "\\midrule")
-    push!(lines, "\\multicolumn{7}{r@{}}{\\emph{continued on next page}}\\\\")
+    push!(lines, "\\multicolumn{9}{r@{}}{\\emph{continued on next page}}\\\\")
     push!(lines, "\\endfoot")
     push!(lines, "\\bottomrule")
     push!(lines, "\\endlastfoot")
@@ -97,7 +105,7 @@ function main()
         for dd in sort(unique(sub_p.d))
             for BB in sort(unique(sub_p.B))
                 push!(lines, "\\addlinespace[0.9ex]")
-                push!(lines, "\\multicolumn{7}{@{}l}{\\textbf{" *
+                push!(lines, "\\multicolumn{9}{@{}l}{\\textbf{" *
                     PROB_TEX[prob] * "}\\quad \\(d = " * string(Int(dd)) *
                     "\\), \\(\\Nlike = " * _b_tex(BB) * "\\)}\\\\*")
                 push!(lines, "\\addlinespace[0.25ex]")
@@ -126,11 +134,14 @@ function main()
                         v = filter(!isnan, abs.(Vector{Float64}(ss[keep, :dlogZ])))
                         isempty(v) ? NaN : median(v)
                     end
+                    qe50 = med(:QE_p500)
+                    qe975 = med(:QE_p975)
                     rec  = med(:mode_recovery)
                     row = ALG_TEX[alg] * " & " *
                         string(n_adm) * "/" * string(n_tot) * reason * " & " *
                         _fmt(eta) * " & " * _fmt(w1) * " & " * _fmt(swd) *
                         " & " * _fmt(dlz) * " & " *
+                        _fmt(qe50) * " & " * _fmt(qe975) * " & " *
                         (isnan(rec) ? "--" : "\\(" * @sprintf("%.2f", rec) * "\\)") *
                         " \\\\"
                     push!(lines, row)
