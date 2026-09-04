@@ -89,6 +89,7 @@ and the contour + marginals overview at `d = 5`.
 | Figs. B.12–B.18 (running-efficiency atlas) | `runconv__{mvn,banana,funnel,mridges,shell,mridges_spiky,eggbox}__d*__B5e5__all__grid` | `tools/figs_runconv_grids.jl` | runs |
 | Running-efficiency atlas at d = 10 (scaling targets) | `runconv__{mvn,banana,funnel,mridges}__d10__B5e5__all__grid` | `tools/figs_runconv_d10.jl` | runs |
 | Fig. B.19 (running accuracy, M-ridges) | `accconv__mridges__d5__B5e5__all__W1` | `tools/figs_accconv.jl` | runs + story + truth |
+| Accuracy-convergence atlas (remaining five targets) | `accconv__{mvn,banana,shell,mridges_spiky}__d5__B5e5__all__W1`, `accconv__eggbox__d2__B5e5__all__W1` | `tools/figs_accconv_atlas.jl` | runs + instrumented snapshot caches + truth |
 | Summary heatmaps at the remaining grid angles (Sec. B.1) | `summary__all__{d5__B5e3,d5__B5e4,d2__B5e5,d10__B5e5}__heatmap-{eta,dlogz,W1}` (12 files) | `tools/figs_heatmap_angles.jl` | cells |
 | Quantile-calibration heatmaps (body Sec. 8.6 + appendix) | `summary__all__d5__B5e5__heatmap-qe{025,160,500,840,975}` (5 files) | `tools/figs_calibration.jl` | cells |
 
