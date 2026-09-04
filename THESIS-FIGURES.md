@@ -86,7 +86,9 @@ and the contour + marginals overview at `d = 5`.
 | Fig. B.10 (iteration convergence, scaling targets) | `iterconv__{mvn,banana,funnel,mridges}__d5__B5e5__mw__eta` | `tools/figs_storyboard.jl` | runs |
 | Fig. B.11 (iteration convergence, specialists) | `iterconv__{shell,mridges_spiky}__d5__B5e5__mw__eta`, `iterconv__eggbox__d2__B5e5__mw__eta` | `tools/figs_storyboard.jl` | runs |
 | Figs. B.12–B.18 (running-efficiency atlas) | `runconv__{mvn,banana,funnel,mridges,shell,mridges_spiky,eggbox}__d*__B5e5__all__grid` | `tools/figs_runconv_grids.jl` | runs |
+| Running-efficiency atlas at d = 10 (scaling targets) | `runconv__{mvn,banana,funnel,mridges}__d10__B5e5__all__grid` | `tools/figs_runconv_d10.jl` | runs |
 | Fig. B.19 (running accuracy, M-ridges) | `accconv__mridges__d5__B5e5__all__W1` | `tools/figs_accconv.jl` | runs + story + truth |
+| Summary heatmaps at the remaining grid angles (Sec. B.1) | `summary__all__{d5__B5e3,d5__B5e4,d2__B5e5,d10__B5e5}__heatmap-{eta,dlogz,W1}` (12 files) | `tools/figs_heatmap_angles.jl` | cells |
 
 Notes.
 
@@ -115,4 +117,5 @@ Notes.
 | Tab. 8.1, 8.4, 8.5 (headline medians) | `headline_medians.csv` / `cells.csv` | `scripts/extract_headlines.jl` |
 | Tab. 8.2 (MW stopping behavior) | `mw_iteration_summary.csv` | `tools/figs_iterconv.jl` |
 | Tab. 8.3 (MW vs. NUTS efficiency ratio) | `cells.csv` | `scripts/extract_headlines.jl` (medians; ratio in thesis text) |
+| Master results table (Appendix B) | `master_results_table.tex` (from `cells.csv`) | `tools/table_master_results.jl` |
 | Statistical test results (§8.6) | `headline_tests.csv`, `friedman_nemenyi.csv` | `scripts/02b_tests.jl` |

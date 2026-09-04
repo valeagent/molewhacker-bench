@@ -2557,7 +2557,8 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
                                 transform::Symbol = :negative_log10,
                                 d::Integer = HEADLINE_DIMENSION,
                                 B::Real = 5e5,
-                                cap_dlogZ::Real = 10.0)
+                                cap_dlogZ::Real = 10.0,
+                                problems::Vector{Symbol} = collect(HEATMAP_PROBLEM_ORDER))
     set_pub_theme!(class = :wide)
     res = figure_resolution(:wide, :heatmap)
     fig = Figure(size = res)
@@ -2568,13 +2569,13 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
     # (the caption explains the reduced column set).
     algs   = metric_col === :dlogZ ? Symbol[:is, :ns, :mw] : collect(ALG_ORDER)
     n_alg  = length(algs)
-    n_prob = length(HEATMAP_PROBLEM_ORDER)
+    n_prob = length(problems)
     raw        = fill(NaN, n_prob, n_alg)
     score      = fill(NaN, n_prob, n_alg)
     flagged    = falses(n_prob, n_alg)            # no admissible seeds
     saturation = fill(:none, n_prob, n_alg)
 
-    for (i, prob) in enumerate(HEATMAP_PROBLEM_ORDER),
+    for (i, prob) in enumerate(problems),
         (j, alg) in enumerate(algs)
         # Per-row dimension: d=2 for eggbox, requested_d otherwise.
         d_i = _heatmap_problem_dim(prob, d)
@@ -2641,7 +2642,7 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
     # Row labels: append `/  d=2` to the eggbox row; everything else
     # carries the requested d in the title rather than the row label.
     yticktext = String[]
-    for prob in HEATMAP_PROBLEM_ORDER
+    for prob in problems
         d_i = _heatmap_problem_dim(prob, d)
         push!(yticktext, d_i == Int(d) ? PROBLEM_LABEL[prob] :
             string(PROBLEM_LABEL[prob], "  /  d = ", d_i))
@@ -2725,7 +2726,7 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
     end
 
     # Thin horizontal rule above the eggbox (d=2) sub-block — V5 §2.
-    eggbox_row = findfirst(==(:eggbox), HEATMAP_PROBLEM_ORDER)
+    eggbox_row = findfirst(==(:eggbox), problems)
     if eggbox_row !== nothing && eggbox_row > 1
         y_rule = eggbox_row - 0.5
         lines!(ax, [0.5, n_alg + 0.5], [y_rule, y_rule];
@@ -2752,10 +2753,13 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
             "\\bigstar\\;\\text{MW stopped early (iteration cap } T_{\\max}\\text{ reached, budget not exhausted)}")
         has_tri && push!(parts,
             "\\blacktriangle\\;\\text{NS stopped early (evidence converged)}")
-        Label(fig[row, :],
-            LaTeXString("\$" * join(parts, " \\qquad ") * "\$");
-            fontsize = 8, halign = :center)
-        row += 1
+        # One label per line: a single joined line overflows the canvas
+        # when both glyph classes appear in the same figure.
+        for p in parts
+            Label(fig[row, :], LaTeXString("\$" * p * "\$");
+                fontsize = 8, halign = :center)
+            row += 1
+        end
     end
     if has_gap
         Label(fig[row, :],
