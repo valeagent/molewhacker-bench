@@ -25,7 +25,7 @@ function replot_tri()
         (:shell,         :mw,   5),
         (:mridges_spiky, :mw,   5), (:mridges_spiky, :mh, 5),
         (:mridges,       :mw,   2), (:mridges, :mw, 10),
-        (:eggbox,        :mw,   2),
+        (:eggbox,        :mw,   2), (:eggbox, :mh, 2),
     ]
     for (prob, alg, d) in jobs
         truth = _load_truth(truth_dir, prob, d)

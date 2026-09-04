@@ -47,10 +47,13 @@ function main()
     save_pdf(fig, fig_filename(family = :tests, problem = :all, d = d,
               B = B, alg = :mw, extra = "wilcoxon"); dir = figs_dir)
 
-    # Dimensional grid at the central budget (Fig. 8.6b).
-    fig = fig_dim_grid(df; B = 5e4)
-    save_pdf(fig, fig_filename(family = :dim, problem = :all, d = nothing,
-              B = 5e4, alg = :all, extra = "all"); dir = figs_dir)
+    # Dimensional grids at the central and largest budgets
+    # (thesis Fig. 8.7b and Fig. 8.7a).
+    for Bdim in (5e4, 5e5)
+        fig = fig_dim_grid(df; B = Bdim)
+        save_pdf(fig, fig_filename(family = :dim, problem = :all, d = nothing,
+                  B = Bdim, alg = :all, extra = "all"); dir = figs_dir)
+    end
 
     @info "headline figures regenerated" figs_dir
     return 0
