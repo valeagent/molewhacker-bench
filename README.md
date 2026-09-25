@@ -215,6 +215,56 @@ the benchmark protocol as specified in thesis Ch. 7; comments tagged
 `V2-FIX-*` … `V8-FIX-*` record internal revision milestones of the
 benchmark engine and are kept as engineering history.
 
+## Revision of 25 September 2026
+
+Following an external review of the thesis, two post-campaign
+analyses were added. Neither modifies the archived runs, truth sets,
+`cells.csv` or figures; all outputs live under
+`experiments/out/revision_2026-09-25/`.
+
+* **Frozen-mixture fresh-draw estimator**
+  (`experiments/tools/fresh_draw_recompute.jl`). The archived
+  MoleWhacker output is the accumulated population of all whacking
+  iterations weighted against the final mixture, which is not a valid
+  importance sampling estimator in general (thesis Sec. 5.7.1). For
+  every one of the 795 archived MoleWhacker runs the tool loads the
+  stored final mixture, draws `N_fresh = floor(B - N_L)` independent
+  points (the budget the archived run left unspent), weights them by
+  the exact target, and evaluates the archived metric pipeline on the
+  fresh weighted sample. `cells_fresh.csv` holds one row per run
+  (status, the two efficiencies `eta_cost_fresh = ESS / (N_L + N_fresh)`
+  and `eta_proposal_fresh = ESS / N_fresh`, Pareto shape, W1, SWD,
+  quantile errors, log-evidence error, wall time); `fresh_manifest.csv`
+  records provenance (source-file hash, proposal hash, RNG seed,
+  counts, costs). `--test` runs the estimator checks (constant ratio,
+  Gaussian target, the two-component counterexample, transform and
+  full-mixture identities against BAT and Distributions, thread-count
+  independence). The per-run `.jld2` payloads (10k-point resample, top
+  weights) are not committed; they are regenerable from the archived
+  mixtures with the recorded seeds.
+* **Partition-mass error** (`experiments/tools/partition_mass.jl`),
+  which replaces the retired centroid-clustering mode-recovery rate
+  (still present in `cells.csv` as `mode_recovery`; on independent
+  draws from the targets that metric returns zero in five and ten
+  dimensions). `TV_partition` is the total-variation distance between
+  the weighted output's and the true probabilities of a fixed
+  partition: the 2^d coordinate-sign orthants of M-ridges (reference
+  probabilities by quadrature of the truncated theta_1 marginal) and
+  the seven theta_1 intervals of spiky M-ridges bounded by the six
+  density minima (Gaussian-CDF reference probabilities). Outputs:
+  `partition_reference.csv`, `partition_calibration.csv` (checks
+  against the 10^6-draw truth sets and multinomial finite-sample
+  floors), `partition_mass.csv` (every archived multimodal cell with
+  population/output weights, plus the fresh MoleWhacker draws),
+  `partition_tests.csv` (two-sided seed-paired Wilcoxon and Cliff's
+  delta at the headline setting), and the two `figs/partition__*`
+  figures.
+* `experiments/tools/revision_tables.py` (Python, pandas) emits the
+  LaTeX tables of thesis Appendix A from these CSVs, and
+  `table_master_results.jl` now prints the exclusion reason of a `0/n`
+  cell per cause (r: R-hat, b: budget band, i: infeasible) and the
+  partition-mass column in place of the retired recovery rate.
+
 ## License
 
 MIT — see `LICENSE`. Every Julia source file carries an SPDX header.
