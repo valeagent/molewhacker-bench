@@ -82,14 +82,18 @@ function main()
         "only); median absolute quantile error at the median and at " *
         "the \\(97.5\\,\\%\\) level (coordinate-averaged absolute " *
         "deviations in the parameter's own units, smaller is better, " *
-        "\\cref{subsec:bench-coverage}; on the multimodal targets the " *
-        "central level is ill-conditioned and the outer level is the " *
-        "meaningful calibration number, " *
+        "\\cref{subsec:bench-coverage}; on the smooth \\mridges{} cells the " *
+        "central level is ill-conditioned, because the true median of each " *
+        "bimodal coordinate falls in the valley between two symmetric modes, " *
+        "and the outer level is the meaningful calibration number there, " *
         "\\cref{sec:bench-results-calibration}); median partition-mass " *
         "error \\(\\mathrm{TV}_{\\mathrm{part}}\\) of the reported output " *
-        "(multimodal targets only, \\cref{subsec:bench-recovery}; for \\mw{} " *
-        "this is the accumulated population, the frozen-mixture fresh-draw values are in " *
-        "\\cref{tab:fresh-vs-population}). " *
+        "(\\mridges{} and \\mridgesspiky{} only, \\cref{subsec:bench-recovery}; for \\mw{} " *
+        "this is the accumulated population; the fresh-draw partition-mass values at the " *
+        "headline setting are in \\cref{tab:headline-recovery}, and the complete grid of " *
+        "population and fresh values is in " *
+        "\\texttt{experiments/out/revision\\_2026-09-25/partition\\_mass.csv} " *
+        "of the companion repository). " *
         "``--'' marks metrics that are undefined for the cell; " *
         "\\(0/n\\) rows carry the exclusion reason as a superscript " *
         "(\\textsuperscript{r}: all seeds failed the " *

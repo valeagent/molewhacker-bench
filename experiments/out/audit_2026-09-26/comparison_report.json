@@ -1,0 +1,99 @@
+{
+  "run_date": "2026-09-26 15:58:18",
+  "python": "3.13.1",
+  "numpy": "2.1.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "tolerance": {
+    "rel": 1e-09,
+    "abs": 1e-15
+  },
+  "grid_checks": {
+    "differences": [],
+    "n_differences": 0,
+    "elapsed_seconds_reproduced": 0.4802690001670271,
+    "elapsed_seconds_reference": 0.3308782000094652
+  },
+  "table_checks": {
+    "differences": [],
+    "n_differences": 0,
+    "elapsed_seconds_reproduced": 0.4638345001731068
+  },
+  "headline_values_reproduced": {
+    "first_doubling_max_CDF_difference_over_d": {
+      "mridges": 4.902935808459574e-07,
+      "funnel": 3.2092248747339625e-07,
+      "shell": 2.7046923697926495e-07
+    },
+    "second_doubling_max_CDF_difference_over_d": {
+      "mridges": 1.2255743642164418e-07,
+      "funnel": 8.02100174057685e-08,
+      "shell": 6.760839546537944e-08
+    },
+    "largest_first_doubling_quantile_shift": 5.855603657511921e-06,
+    "banana_deterministic_logZ": {
+      "2": -4.155408138371801,
+      "5": -10.385789359419755,
+      "10": -20.769758061166346
+    },
+    "banana_stored_minus_deterministic": {
+      "2": -7.614011089529527e-05,
+      "5": -4.608360466029637e-05,
+      "10": 4.9089372296862166e-05
+    },
+    "banana_fresh_median_abs_error_stored_vs_deterministic": {
+      "d2_B50000": [
+        0.00668494965972144,
+        0.006614962474717601
+      ],
+      "d2_B500000": [
+        0.0010621654029652206,
+        0.0010621654029652206
+      ],
+      "d5_B50000": [
+        0.005427248298055964,
+        0.005427248298055964
+      ],
+      "d5_B500000": [
+        0.0008029035966163889,
+        0.0008418277837609622
+      ],
+      "d10_B50000": [
+        0.006911072563950071,
+        0.006911072563950071
+      ],
+      "d10_B500000": [
+        0.0010999288482036462,
+        0.0010671228852441317
+      ]
+    },
+    "banana_fresh_wins_under_deterministic_reference": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "gauss_legendre_cube_mass_2d": {
+      "128": 0.9981809842030451,
+      "256": 0.9981809987186265,
+      "512": 0.9981809987186234
+    },
+    "gauss_legendre_256_vs_512": 3.1086244689504383e-15,
+    "table_rows_checked": 225,
+    "table_metric_entries_checked": 1575,
+    "table_seed_counts_checked": 225,
+    "table_mismatches": 0,
+    "table_nuts_over_1point2B_entries": 312
+  },
+  "brief_targets_met": {
+    "first_doubling_CDF_rounded_ok": true,
+    "deterministic_logZ_exact_ok": true,
+    "offsets_rounded_ok": true,
+    "fresh_medians_rounded_ok": true,
+    "all_six_fresh_wins_survive": true,
+    "table_counts_ok": true
+  },
+  "all_brief_targets_met": true,
+  "byte_identical_apart_from_runtime_keys": true
+}

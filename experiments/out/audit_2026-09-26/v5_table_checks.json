@@ -1,0 +1,2510 @@
+{
+  "master_table_rows_checked": 225,
+  "metric_entries_checked": 1575,
+  "seed_counts_checked": 225,
+  "mismatches": [],
+  "nuts_over_1point2B": [
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "6474.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.29xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "10804.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.16xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "8300.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.66xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "8648.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.73xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "7208.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.44xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "9870.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.97xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "6942.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.39xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "7854.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.57xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "7710.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.54xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "6780.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.36xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "6666.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.33xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "8998.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.8xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "8570.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.71xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "6176.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.24xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "8740.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.75xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "9226.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.85xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "8090.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.62xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "7752.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.55xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "9874.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.97xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "8736.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.75xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "24681.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.94xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "29936.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.99xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "28546.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.71xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "29396.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.88xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "28106.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.62xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "28936.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.79xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "21996.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.4xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "25476.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.1xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "26566.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.31xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "26336.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.27xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "33021.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.6xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "24291.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.86xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "30446.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.09xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "23641.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.73xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "23116.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.62xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "22411.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.48xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "29091.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.82xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "26271.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.25xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "26546.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.31xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "29246.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.85xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "45656.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.13xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "65386.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.08xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "50036.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.01xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "53316.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.66xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "63266.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.65xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "49176.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.84xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "50466.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.09xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "47216.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.44xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "58886.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.78xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "42236.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.45xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "60696.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.14xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "55986.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.2xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "62676.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.54xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "52586.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.52xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "57766.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.55xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "49606.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.92xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "55436.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.09xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "58856.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.77xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "43246.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.65xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "51486.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.3xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "41",
+      "cost": "61556.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.23xB > 1.2B)"
+    },
+    {
+      "problem": "banana",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "277",
+      "cost": "60526.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.21xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "6208.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.24xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "6140.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.23xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "6056.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.21xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "6028.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.21xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "6344.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.27xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "6316.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.26xB > 1.2B)"
+    },
+    {
+      "problem": "eggbox",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "6004.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.2xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "11394.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.28xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "14244.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.85xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "7970.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.59xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "6178.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.24xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "7574.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.51xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "10416.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.08xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "7716.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.54xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "8318.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.66xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "7988.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.6xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "9502.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.9xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "6074.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.21xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "11086.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.22xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "10628.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.13xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "12442.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.49xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "9306.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.86xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "8792.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.76xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "9322.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.86xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "9266.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.85xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "23832.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.77xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "7062.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.41xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "52541.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.51xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "34101.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.82xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "55416.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.08xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "34041.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.81xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "37326.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.47xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "41791.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.36xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "68696.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.74xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "46341.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.27xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "61881.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.38xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "40111.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.02xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "34621.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.92xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "53396.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.68xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "39641.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.93xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "48471.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.69xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "42946.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.59xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "41151.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.23xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "56156.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.23xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "43256.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.65xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "46796.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.36xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "41331.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.27xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "50000.0",
+      "seed": "97",
+      "cost": "71156.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.42xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "50000.0",
+      "seed": "173",
+      "cost": "62326.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.25xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "5",
+      "B": "50000.0",
+      "seed": "491",
+      "cost": "81336.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.63xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "172376.0",
+      "notes": "budget-infeasible (one trajectory ~ 34.48xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "164386.0",
+      "notes": "budget-infeasible (one trajectory ~ 32.88xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "81596.0",
+      "notes": "budget-infeasible (one trajectory ~ 16.32xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "155076.0",
+      "notes": "budget-infeasible (one trajectory ~ 31.02xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "193966.0",
+      "notes": "budget-infeasible (one trajectory ~ 38.79xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "146806.0",
+      "notes": "budget-infeasible (one trajectory ~ 29.36xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "132336.0",
+      "notes": "budget-infeasible (one trajectory ~ 26.47xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "210286.0",
+      "notes": "budget-infeasible (one trajectory ~ 42.06xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "124096.0",
+      "notes": "budget-infeasible (one trajectory ~ 24.82xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "159566.0",
+      "notes": "budget-infeasible (one trajectory ~ 31.91xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "147716.0",
+      "notes": "budget-infeasible (one trajectory ~ 29.54xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "130926.0",
+      "notes": "budget-infeasible (one trajectory ~ 26.19xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "132006.0",
+      "notes": "budget-infeasible (one trajectory ~ 26.4xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "158686.0",
+      "notes": "budget-infeasible (one trajectory ~ 31.74xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "134316.0",
+      "notes": "budget-infeasible (one trajectory ~ 26.86xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "162036.0",
+      "notes": "budget-infeasible (one trajectory ~ 32.41xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "149536.0",
+      "notes": "budget-infeasible (one trajectory ~ 29.91xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "121086.0",
+      "notes": "budget-infeasible (one trajectory ~ 24.22xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "152566.0",
+      "notes": "budget-infeasible (one trajectory ~ 30.51xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "131106.0",
+      "notes": "budget-infeasible (one trajectory ~ 26.22xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "11",
+      "cost": "223656.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.47xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "23",
+      "cost": "162886.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.26xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "41",
+      "cost": "148766.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.98xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "67",
+      "cost": "146086.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.92xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "97",
+      "cost": "221386.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.43xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "113",
+      "cost": "121396.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.43xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "137",
+      "cost": "158356.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.17xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "173",
+      "cost": "128736.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.57xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "211",
+      "cost": "139326.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.79xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "239",
+      "cost": "142076.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.84xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "277",
+      "cost": "169526.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.39xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "313",
+      "cost": "145386.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.91xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "359",
+      "cost": "150776.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.02xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "401",
+      "cost": "126776.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.54xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "449",
+      "cost": "173536.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.47xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "491",
+      "cost": "153506.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.07xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "541",
+      "cost": "107336.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.15xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "587",
+      "cost": "118936.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.38xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "631",
+      "cost": "111476.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.23xB > 1.2B)"
+    },
+    {
+      "problem": "funnel",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "677",
+      "cost": "186706.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.73xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "7028.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.41xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "6142.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.23xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "7974.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.59xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "8162.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.63xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "6172.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.23xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "8986.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.8xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "10660.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.13xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "7876.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.58xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "8834.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.77xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "7552.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.51xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "6928.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.39xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "7696.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.54xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "8050.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.61xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "6894.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.38xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "6638.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.33xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "7388.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.48xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "42356.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.47xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "70701.0",
+      "notes": "budget-infeasible (one trajectory ~ 14.14xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "29811.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.96xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "33701.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.74xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "48056.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.61xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "45996.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.2xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "34081.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.82xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "43346.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.67xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "33836.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.77xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "45581.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.12xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "38186.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.64xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "50361.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.07xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "43966.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.79xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "31071.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.21xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "39416.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.88xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "36136.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.23xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "35811.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.16xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "33336.0",
+      "notes": "budget-infeasible (one trajectory ~ 6.67xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "45336.0",
+      "notes": "budget-infeasible (one trajectory ~ 9.07xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "38606.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.72xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "5",
+      "B": "50000.0",
+      "seed": "277",
+      "cost": "79511.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.59xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "111226.0",
+      "notes": "budget-infeasible (one trajectory ~ 22.25xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "91916.0",
+      "notes": "budget-infeasible (one trajectory ~ 18.38xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "139896.0",
+      "notes": "budget-infeasible (one trajectory ~ 27.98xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "142746.0",
+      "notes": "budget-infeasible (one trajectory ~ 28.55xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "120366.0",
+      "notes": "budget-infeasible (one trajectory ~ 24.07xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "104876.0",
+      "notes": "budget-infeasible (one trajectory ~ 20.98xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "114056.0",
+      "notes": "budget-infeasible (one trajectory ~ 22.81xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "108286.0",
+      "notes": "budget-infeasible (one trajectory ~ 21.66xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "99916.0",
+      "notes": "budget-infeasible (one trajectory ~ 19.98xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "141996.0",
+      "notes": "budget-infeasible (one trajectory ~ 28.4xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "106456.0",
+      "notes": "budget-infeasible (one trajectory ~ 21.29xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "122826.0",
+      "notes": "budget-infeasible (one trajectory ~ 24.57xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "136156.0",
+      "notes": "budget-infeasible (one trajectory ~ 27.23xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "113756.0",
+      "notes": "budget-infeasible (one trajectory ~ 22.75xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "112406.0",
+      "notes": "budget-infeasible (one trajectory ~ 22.48xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "106876.0",
+      "notes": "budget-infeasible (one trajectory ~ 21.38xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "115526.0",
+      "notes": "budget-infeasible (one trajectory ~ 23.11xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "125376.0",
+      "notes": "budget-infeasible (one trajectory ~ 25.08xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "138836.0",
+      "notes": "budget-infeasible (one trajectory ~ 27.77xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "127436.0",
+      "notes": "budget-infeasible (one trajectory ~ 25.49xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "11",
+      "cost": "177266.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.55xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "23",
+      "cost": "119746.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.39xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "41",
+      "cost": "115076.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.3xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "67",
+      "cost": "165976.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.32xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "97",
+      "cost": "150396.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.01xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "113",
+      "cost": "80966.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.62xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "137",
+      "cost": "109516.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.19xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "173",
+      "cost": "99116.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.98xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "211",
+      "cost": "113546.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.27xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "239",
+      "cost": "146146.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.92xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "277",
+      "cost": "121376.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.43xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "313",
+      "cost": "135866.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.72xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "359",
+      "cost": "111556.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.23xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "401",
+      "cost": "106476.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.13xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "449",
+      "cost": "104496.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.09xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "491",
+      "cost": "156646.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.13xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "541",
+      "cost": "120546.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.41xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "587",
+      "cost": "177836.0",
+      "notes": "budget-infeasible (one trajectory ~ 3.56xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "631",
+      "cost": "111856.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.24xB > 1.2B)"
+    },
+    {
+      "problem": "mridges",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "677",
+      "cost": "132406.0",
+      "notes": "budget-infeasible (one trajectory ~ 2.65xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "27496.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.5xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "25256.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.05xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "26311.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.26xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "57201.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.44xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "23841.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.77xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "23161.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.63xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "27791.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.56xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "21221.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.24xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "23336.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.67xB > 1.2B)"
+    },
+    {
+      "problem": "mridges_spiky",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "25921.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.18xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "6090.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.22xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "6894.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.38xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "7792.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.56xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "7008.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.4xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "6810.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.36xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "6206.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.24xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "8142.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.63xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "6710.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.34xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "6526.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.31xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "6550.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.31xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "6012.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.2xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "6844.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.37xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "2",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "7298.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.46xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "22496.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.5xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "24621.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.92xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "23936.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.79xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "22356.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.47xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "23606.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.72xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "25626.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.13xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "25826.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.17xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "23821.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.76xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "23766.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.75xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "23066.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.61xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "23476.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.7xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "26371.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.27xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "25021.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.0xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "28641.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.73xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "25981.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.2xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "26551.0",
+      "notes": "budget-infeasible (one trajectory ~ 5.31xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "23121.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.62xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "23771.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.75xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "23466.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.69xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "22846.0",
+      "notes": "budget-infeasible (one trajectory ~ 4.57xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "71106.0",
+      "notes": "budget-infeasible (one trajectory ~ 14.22xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "60966.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.19xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "66976.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.4xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "60996.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.2xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "60236.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.05xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "113",
+      "cost": "60096.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.02xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "137",
+      "cost": "58546.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.71xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "173",
+      "cost": "68356.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.67xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "211",
+      "cost": "62056.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.41xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "239",
+      "cost": "65846.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.17xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "277",
+      "cost": "66136.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.23xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "313",
+      "cost": "67376.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.48xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "359",
+      "cost": "68746.0",
+      "notes": "budget-infeasible (one trajectory ~ 13.75xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "401",
+      "cost": "60596.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.12xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "449",
+      "cost": "61626.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.33xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "491",
+      "cost": "54276.0",
+      "notes": "budget-infeasible (one trajectory ~ 10.86xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "541",
+      "cost": "61716.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.34xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "587",
+      "cost": "64536.0",
+      "notes": "budget-infeasible (one trajectory ~ 12.91xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "631",
+      "cost": "59706.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.94xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "5000.0",
+      "seed": "677",
+      "cost": "58686.0",
+      "notes": "budget-infeasible (one trajectory ~ 11.74xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "23",
+      "cost": "62676.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.25xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "41",
+      "cost": "66216.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.32xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "97",
+      "cost": "63566.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.27xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "137",
+      "cost": "60946.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.22xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "173",
+      "cost": "61766.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.24xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "211",
+      "cost": "64646.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.29xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "239",
+      "cost": "76316.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.53xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "277",
+      "cost": "61346.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.23xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "313",
+      "cost": "60446.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.21xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "359",
+      "cost": "62426.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.25xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "401",
+      "cost": "68456.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.37xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "449",
+      "cost": "74026.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.48xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "541",
+      "cost": "62326.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.25xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "631",
+      "cost": "62606.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.25xB > 1.2B)"
+    },
+    {
+      "problem": "mvn",
+      "d": "10",
+      "B": "50000.0",
+      "seed": "677",
+      "cost": "63196.0",
+      "notes": "budget-infeasible (one trajectory ~ 1.26xB > 1.2B)"
+    },
+    {
+      "problem": "shell",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "11",
+      "cost": "41791.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.36xB > 1.2B)"
+    },
+    {
+      "problem": "shell",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "23",
+      "cost": "40646.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.13xB > 1.2B)"
+    },
+    {
+      "problem": "shell",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "41",
+      "cost": "36701.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.34xB > 1.2B)"
+    },
+    {
+      "problem": "shell",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "67",
+      "cost": "39656.0",
+      "notes": "budget-infeasible (one trajectory ~ 7.93xB > 1.2B)"
+    },
+    {
+      "problem": "shell",
+      "d": "5",
+      "B": "5000.0",
+      "seed": "97",
+      "cost": "42746.0",
+      "notes": "budget-infeasible (one trajectory ~ 8.55xB > 1.2B)"
+    }
+  ],
+  "audit_provenance": {
+    "run_date": "2026-09-26",
+    "python": "3.13.1",
+    "thesis_table": "C:\\MyFiles\\master\\masterarbeit\\masterarbeit_v1\\appendices\\B-master-table.tex",
+    "elapsed_seconds": 0.4638345001731068
+  }
+}
