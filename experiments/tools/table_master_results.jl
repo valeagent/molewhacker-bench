@@ -69,7 +69,7 @@ function main()
     push!(lines, "% from experiments/out/tables/cells.csv -- do not edit by hand.")
     push!(lines, "\\begingroup")
     push!(lines, "\\scriptsize")
-    push!(lines, "\\setlength{\\tabcolsep}{3.5pt}")
+    push!(lines, "\\setlength{\\tabcolsep}{2.8pt}")
     push!(lines, "\\begin{longtable}{@{}l c r r r r r r r@{}}")
     push!(lines, "\\caption[Master results table.]{Master results table: " *
         "per-cell medians over the admissible seeds for every " *

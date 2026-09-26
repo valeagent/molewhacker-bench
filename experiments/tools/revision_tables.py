@@ -101,7 +101,7 @@ head = (r"& & & & & \multicolumn{3}{c}{efficiency} & & \multicolumn{2}{c}{\(\won
         r"\cmidrule(lr){6-8}\cmidrule(lr){10-11}\cmidrule(lr){12-13}"
         r"Target & \(d\) & \(\Nlike\) & Seeds & \(N_{\mathrm{fresh}}\) [k] & \(\effic\) pop & \(\effic^{\mathrm{fresh}}\) & "
         r"\(\efficis^{\mathrm{fresh}}\) & \(\hat k\) & pop & fresh & pop & fresh \\")
-lines = header("fresh_vs_population", cap, "tab:fresh-vs-population", "@{}l c c c r r r r r r r r r@{}", head, ncols=13, tabcolsep="2.5pt")
+lines = header("fresh_vs_population", cap, "tab:fresh-vs-population", "@{}l c c c r r r r r r r r r@{}", head, ncols=13, tabcolsep="2.0pt")
 for prob in PROB_ORDER:
     for d in sorted(fresh[fresh.problem == prob].d.unique()):
         for B in sorted(fresh[(fresh.problem == prob) & (fresh.d == d)].B.unique()):
