@@ -1487,7 +1487,11 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
                   N_show::Int = 5_000,
                   rng::AbstractRNG = MersenneTwister(20260603 + mr.seed),
                   fontscale::Real = 2.0,
-                  coords::Union{Nothing,Vector{Int}} = nothing)
+                  coords::Union{Nothing,Vector{Int}} = nothing,
+                  neff_override::Union{Nothing,Real} = nothing,
+                  cost_override::Union{Nothing,Real} = nothing,
+                  footer_note::Union{Nothing,AbstractString} = nothing,
+                  bandwidth_neff::Union{Nothing,Real} = nothing)
     # The thesis embeds every triangle plot at half
     # column width (≈195 pt), so all text is produced `fontscale`×
     # larger on the 396 pt canvas and prints at the intended size.
@@ -1495,6 +1499,20 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
     # at d = 10 the full 10×10 grid is illegible at any font size, so
     # the caller passes a representative subset (default: all coords
     # for d ≤ 6, else θ₁, θ₂, θ₃ and θ_d).
+    #
+    # Primary-results revision (2026-09-27), all default-preserving:
+    # * `neff_override` / `cost_override` — print an externally supplied
+    #   native N_eff and cost in the footer instead of `neff(mr)` and
+    #   `mr.Nlike_used`. Needed when `mr` is an equal-weight DISPLAY
+    #   resample of a weighted final sample: `neff(mr)` would then report
+    #   the display size (10 000) and η = 1, not the native values.
+    # * `footer_note` — replaces the "(N draws shown)" parenthetical by
+    #   the given note, set on its own plain-text line below the values.
+    # * `bandwidth_neff` — when given, every 1-D marginal KDE of the
+    #   algorithm sample uses the Silverman bandwidth
+    #   h = 0.9 min(sd, IQR/1.34) n_eff^(-1/5) computed from the sample
+    #   with n_eff = `bandwidth_neff` (instead of Makie's default, which
+    #   would treat the display duplicates as independent draws).
     set_pub_theme!(class = :wide)
     res = figure_resolution(:wide, :tri)
     d = mr.d
@@ -1523,8 +1541,25 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
     coord_lims = [tight_limits(truth; coords = (j, j))[1] for j in 1:d]
 
     # V2-FIX-3a — chain-aware Neff for mh/nuts, Kish for is/ns/mw.
-    Neff_val = neff(mr)
-    eta = mr.Nlike_used > 0 && isfinite(Neff_val) ? Neff_val / mr.Nlike_used : NaN
+    # With `neff_override` / `cost_override` the native values supplied
+    # by the caller are printed instead (see the kwarg notes above).
+    Neff_val = neff_override === nothing ? neff(mr) : Float64(neff_override)
+    cost_val = cost_override === nothing ? mr.Nlike_used : Float64(cost_override)
+    eta = cost_val > 0 && isfinite(Neff_val) ? Neff_val / cost_val : NaN
+
+    # Optional Silverman bandwidth with an externally supplied effective
+    # sample size (bandwidth_neff); `nothing` keeps Makie's default.
+    function _marginal_bandwidth(xs::AbstractVector{<:Real})
+        bandwidth_neff === nothing && return nothing
+        n_eff = Float64(bandwidth_neff)
+        (isfinite(n_eff) && n_eff > 0) || return nothing
+        sd = std(xs)
+        iqr = quantile(xs, 0.75) - quantile(xs, 0.25)
+        spread = min(sd, iqr / 1.34)
+        (isfinite(spread) && spread > 0) || (spread = sd)
+        h = 0.9 * spread * n_eff^(-1 / 5)
+        return (isfinite(h) && h > 0) ? h : nothing
+    end
 
     for i in 1:nc, j in 1:nc
         ci = show_coords[i]
@@ -1559,11 +1594,13 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
                 color = (TRUTH_COLOR, 0.6),
                 strokecolor = TRUTH_COLOR, strokewidth = 0.8)
             xs = vec(mr.samples[ci, :])
+            h_bw = _marginal_bandwidth(xs)
+            bw_kw = h_bw === nothing ? NamedTuple() : (; bandwidth = h_bw)
             try
-                density!(ax, xs; weights = collect(pw),
+                density!(ax, xs; weights = collect(pw), bw_kw...,
                     color = (pcol, 0.30), strokecolor = pcol, strokewidth = 1.0)
             catch
-                density!(ax, xs;
+                density!(ax, xs; bw_kw...,
                     color = (pcol, 0.30), strokecolor = pcol, strokewidth = 1.0)
             end
             if i == nc
@@ -1628,10 +1665,33 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
     # the bold title and the "of the weighted draws shown" footer both
     # overran the right edge of the 396 pt canvas.
     Label(fig[0, :], title_str; fontsize = fs(7), font = :bold)
-    metric_txt = LaTeXString(@sprintf(
-        "\$N_{\\mathrm{eff}} = %.0f,\\;\\; \\eta = %.2g\\;\\; (%d\\;\\text{draws shown})\$",
-        Neff_val, eta, N_show_use))
+    metric_txt = if footer_note === nothing
+        LaTeXString(@sprintf(
+            "\$N_{\\mathrm{eff}} = %.0f,\\;\\; \\eta = %.2g\\;\\; (%d\\;\\text{draws shown})\$",
+            Neff_val, eta, N_show_use))
+    else
+        # Native footer for display resamples: N_eff is printed with three
+        # significant digits when it is small (a Kish ESS of 3.9 must not
+        # round to "4"), eta below 0.01 in thesis scientific notation
+        # (7.8 x 10^-6 rather than the C-style "7.8e-06" of the default
+        # footer), and the parenthetical is the caller's note.
+        neff_str = Neff_val >= 100 ? @sprintf("%.0f", Neff_val) : @sprintf("%.3g", Neff_val)
+        eta_str = if isfinite(eta) && 0 < eta < 0.01
+            e10 = floor(Int, log10(eta))
+            @sprintf("%.1f \\times 10^{%d}", eta / 10.0^e10, e10)
+        else
+            @sprintf("%.2g", eta)
+        end
+        LaTeXString(string("\$N_{\\mathrm{eff}} = ", neff_str,
+            ",\\;\\; \\eta = ", eta_str, "\$"))
+    end
     Label(fig[nc + 1, :], metric_txt; fontsize = fs(7))
+    if footer_note !== nothing
+        # The note goes on its own plain-text line: a single math-mode
+        # line with the full note overran the 396 pt canvas, and
+        # MathTeXEngine would set hyphens inside \text as minus signs.
+        Label(fig[nc + 2, :], string("(", footer_note, ")"); fontsize = fs(7))
+    end
     # Tighten the inter-panel gaps (default ~18 pt each) so the
     # data panels claim more of the canvas — at d = 5 this enlarges
     # every panel by roughly 15 % at the embedded print size. Small
@@ -1643,6 +1703,9 @@ function fig_tri(mr::MethodResult, truth::TruthSet;
     gap = nc <= 3 ? fs(12) : fs(2.5)
     rowgap!(fig.layout, gap)
     colgap!(fig.layout, gap)
+    # The two footer lines (values, note) sit close together; the last
+    # gap index is the one between them (rows 0..nc+2 -> nc+2 gaps).
+    footer_note !== nothing && rowgap!(fig.layout, nc + 2, fs(1))
     return fig
 end
 
@@ -2562,13 +2625,21 @@ Render a single headline summary heatmap:
 * **Stray seeds** are dropped at the data-cleaning layer
   (`drop_v5_excluded_rows!` is called by `_do_catalogue_D` and the
   V5 driver), not here.
+* `gap_label` / `gap_label_latex` (2026-09-27): caption-side legend text
+  for grey cells; defaults reproduce the previous figure exactly.
 """
 function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
                                 transform::Symbol = :negative_log10,
                                 d::Integer = HEADLINE_DIMENSION,
                                 B::Real = 5e5,
                                 cap_dlogZ::Real = 10.0,
-                                problems::Vector{Symbol} = collect(HEATMAP_PROBLEM_ORDER))
+                                problems::Vector{Symbol} = collect(HEATMAP_PROBLEM_ORDER),
+                                gap_label::AbstractString = "gray: no admissible run (mixing failure or infeasible budget)",
+                                gap_label_latex::Bool = true)
+    # `gap_label` (2026-09-27, default-preserving): the caption-side legend
+    # text for grey cells. The default is rendered through MathTeXEngine as
+    # before; `gap_label_latex = false` renders a custom label as plain
+    # text (MathTeXEngine turns a hyphen inside \text into a math minus).
     set_pub_theme!(class = :wide)
     res = figure_resolution(:wide, :heatmap)
     fig = Figure(size = res)
@@ -2772,9 +2843,13 @@ function fig_summary_heatmap(df::DataFrame, metric_col::Symbol;
         end
     end
     if has_gap
-        Label(fig[row, :],
-            LaTeXString("\$\\text{gray: no admissible run (mixing failure or infeasible budget)}\$");
-            fontsize = 8, halign = :center)
+        if gap_label_latex
+            Label(fig[row, :],
+                LaTeXString("\$\\text{" * String(gap_label) * "}\$");
+                fontsize = 8, halign = :center)
+        else
+            Label(fig[row, :], String(gap_label); fontsize = 8, halign = :center)
+        end
     end
     return fig
 end
@@ -3161,7 +3236,8 @@ end
 
 7-panel grid of `metric` vs `d` for every problem at the chosen B.
 The grid is 2 rows × 4 columns; the eighth slot hosts a shared
-legend.
+legend. `connect_across_missing = false` (2026-09-27) leaves a gap in a
+line where a dimension has no finite median instead of bridging it.
 """
 # Compact raw-metric y-axis label for the dim grid panels.
 function _dim_metric_label(metric::Symbol)
@@ -3175,7 +3251,14 @@ end
 function fig_dim_grid(df::DataFrame;
                        metric::Symbol = :W1_marginal_avg,
                        B::Real = 1e5,
-                       problems::Tuple = PROBLEM_NAMES)
+                       problems::Tuple = PROBLEM_NAMES,
+                       connect_across_missing::Bool = true)
+    # `connect_across_missing` (2026-09-27, default-preserving): with the
+    # default `true` the per-algorithm line joins the finite medians
+    # (`xs[ok]`), so a missing intermediate dimension is bridged as if
+    # observed. With `false` the line is evaluated on the full dimension
+    # grid of the panel with NaN at every missing value, so a gap is
+    # rendered as a gap (markers only on the finite points).
     # Only problems that are actually swept over more than
     # one dimension get a panel. The old grid drew a 2-10 axis under the
     # fixed-dimension specialists (shell, spiky M-ridges, eggbox) whose
@@ -3215,6 +3298,7 @@ function fig_dim_grid(df::DataFrame;
         xlims!(ax, 1, 11)
         push!(axes, ax)
         sub = df[df.problem .== String(prob) .&& df.B .== Float64(B), :]
+        panel_dims = sort(unique(Vector{Float64}(sub.d)))
         all_y = Float64[]
         for alg in ALG_ORDER
             sub_alg = sub[sub.algorithm .== String(alg), :]
@@ -3231,7 +3315,20 @@ function fig_dim_grid(df::DataFrame;
             ys = Vector{Float64}(grouped.median)
             ok = isfinite.(ys)
             any(ok) || continue
-            ln = lines!(ax, xs[ok], ys[ok];
+            if connect_across_missing
+                xs_line, ys_line = xs[ok], ys[ok]
+            else
+                # Full panel grid with NaN gaps: Makie breaks the line at
+                # every NaN, so nothing is drawn across a missing d.
+                xs_line = panel_dims
+                ys_line = fill(NaN, length(panel_dims))
+                for (k, dk) in enumerate(panel_dims)
+                    idx = findfirst(==(dk), xs)
+                    idx === nothing && continue
+                    isfinite(ys[idx]) && (ys_line[k] = ys[idx])
+                end
+            end
+            ln = lines!(ax, xs_line, ys_line;
                 color = ALG_COLOR[alg], linewidth = ALG_LINEWIDTH[alg],
                 linestyle = ALG_LINESTYLE[alg])
             scatter!(ax, xs[ok], ys[ok];
