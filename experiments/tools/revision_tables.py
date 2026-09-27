@@ -90,12 +90,12 @@ cells["adm"] = cells.apply(admissible, axis=1)
 cap = ("MoleWhacker: archived population against the frozen-mixture fresh draw.",
        r"\mw{} per (target, dimension, budget) cell: medians over all seeds of the archived accumulated-population "
        r"output (\emph{pop}: final-mixture weights, \(\effic\) per consumed cost \(\Nlike\)) and of the frozen-mixture "
-       r"fresh-draw estimator (\emph{fresh}: \(N_{\mathrm{fresh}} = \lfloor B - \Nlike\rfloor\) independent draws from "
-       r"the stored final mixture, weighted by the exact target; \(\effic^{\mathrm{fresh}} = \neff/(\Nlike + N_{\mathrm{fresh}})\) "
+       r"fresh-draw estimator (\emph{fresh}: \(N_{\mathrm{fresh}} = \max\{0, \lfloor B - \Nlike\rfloor\}\) independent draws from "
+       r"the stored final mixture, weighted by the exact target, where \(N_{\mathrm{fresh}} = 0\) means no estimate; \(\effic^{\mathrm{fresh}} = \neff/(\Nlike + N_{\mathrm{fresh}})\) "
        r"per total charged cost, \(\efficis^{\mathrm{fresh}} = \neff/N_{\mathrm{fresh}}\) per fresh draw). "
        r"Seeds column: seeds with a fresh estimate / seeds whose archived cost already reached the budget (no fresh draw within budget) / all seeds. "
-       r"The population efficiency \(\effic\) pop is the median over all archived seeds; the population and fresh accuracy columns are paired on the fresh-eligible seeds (so \funnel{} at \(d = 2\), \(\Nlike = 5\times 10^{4}\) uses \(19\) of \(20\) seeds there, and cells without a fresh estimate show no accuracy entry although archived values exist in \cref{tab:master-results}). "
-       r"\(\hat k\): median Pareto shape of the fresh weights. \(\wonebar\) and \(|\Delta\log\evidence|\) use the archived truth sets and the fixed-\(10^{4}\) resampling convention of \cref{sec:bench-metrics}. "
+       r"The population efficiency \(\effic\) pop is the median over all archived seeds; the population and fresh accuracy columns are paired on the fresh-eligible seeds (so \funnel{} at \(d = 2\), \(\Nlike = 5\times 10^{4}\) uses \(19\) of \(20\) seeds there, and cells without a fresh estimate show no accuracy entry; the archived population values of those cells are in \texttt{experiments/out/tables/cells.csv} of the companion repository, not in \cref{tab:master-results}). "
+       r"\(\hat k\): median Pareto shape of the fresh weights. \(\wonebar\) uses the archived truth sets and the fixed-\(10^{4}\) equal-weight resampling convention of \cref{sec:bench-metrics}; \(|\Delta\log\evidence|\) uses every importance ratio of the fresh draw (the ordinary importance-sampling mean), with no resampling. "
        r"Tool: \texttt{experiments/tools/fresh\_draw\_recompute.jl}; per-run records in \texttt{experiments/out/revision\_2026-09-25/}.")
 head = (r"& & & & & \multicolumn{3}{c}{efficiency} & & \multicolumn{2}{c}{\(\wonebar\)} & \multicolumn{2}{c}{\(|\Delta\log\evidence|\) [\(10^{-3}\)]} \\"
         r"\cmidrule(lr){6-8}\cmidrule(lr){10-11}\cmidrule(lr){12-13}"

@@ -42,7 +42,16 @@
 # save_pdf. figs/heatmap_cell_values.csv lists every inscribed heatmap value
 # next to primary_cell_medians.csv (asserted equal).
 #
-# Usage:  julia --project=. -t 8 experiments/tools/figs_primary.jl
+# Dimension pairs (d = 2 and d = 10; revision of 27 September 2026, v9):
+# shell and mridges_spiky are benchmarked at d = 5 only (run sheet), so the
+# six off-dimension maps restrict their rows to the targets that are in the
+# grid at that dimension (OFFDIM_PROBLEMS: the four scaling targets and
+# eggbox at its canonical d = 2) instead of rendering two rows of grey cells,
+# which the legend would otherwise conflate with "no admissible run".
+# `--only-offdim` regenerates only those six maps (and refreshes their rows
+# of heatmap_cell_values.csv); nothing else is touched.
+#
+# Usage:  julia --project=. -t 8 experiments/tools/figs_primary.jl [--only-offdim]
 # =============================================================================
 
 # partition_mass.jl (definitions only; its CLI main is guarded) pulls in
@@ -56,6 +65,13 @@ using CairoMakie
 const PRIMARY_DIR = joinpath(OUT, "primary_fresh_2026-09-27")
 const FIGS_DIR    = joinpath(PRIMARY_DIR, "figs")
 const GAP_LABEL   = "gray: no admissible run or no within-budget final sample"
+# Rows of the dimension pairs (d = 2, 10): targets present in the grid at the
+# off-headline dimensions plus eggbox at its canonical d = 2 (see header).
+const OFFDIM_DIMS     = (2, 10)
+const OFFDIM_PROBLEMS = Symbol[:mvn, :banana, :funnel, :mridges, :eggbox]
+const ONLY_OFFDIM     = "--only-offdim" in ARGS
+
+heatmap_problems(d::Integer) = d in OFFDIM_DIMS ? copy(OFFDIM_PROBLEMS) : collect(HEATMAP_PROBLEM_ORDER)
 
 _str(x) = x === missing ? "" : String(string(x))
 
@@ -131,17 +147,19 @@ function main()
     med_col = Dict(:eta_Nlike => :eta_Nlike, :dlogZ => :abs_dlogZ, :W1_marginal_avg => :W1_marginal_avg,
                    :QE_p025 => :QE_p025, :QE_p160 => :QE_p160, :QE_p500 => :QE_p500, :QE_p840 => :QE_p840,
                    :QE_p975 => :QE_p975)
+    ONLY_OFFDIM && (jobs = [j for j in jobs if j[1] in OFFDIM_DIMS])
     check_rows = NamedTuple[]
     n_pdf = 0
     for (d, B, metrics) in jobs, metric in metrics
         transform, tag = spec[metric]
+        probs = heatmap_problems(d)
         fig = fig_summary_heatmap(df, metric; transform = transform, d = d, B = B, cap_dlogZ = Inf,
-                                  gap_label = GAP_LABEL, gap_label_latex = false)
+                                  problems = probs, gap_label = GAP_LABEL, gap_label_latex = false)
         name = fig_filename(family = :summary, problem = :all, d = d, B = B, extra = "heatmap-" * tag)
         save_pdf(fig, name; dir = FIGS_DIR); n_pdf += 1
         # Cross-check every inscribed cell against primary_cell_medians.csv.
         algs = metric === :dlogZ ? [:is, :ns, :mw] : collect(ALG_ORDER)
-        for prob in HEATMAP_PROBLEM_ORDER, alg in algs
+        for prob in probs, alg in algs
             d_i = ExperimentsBase._heatmap_problem_dim(prob, d)
             # dlogZ is stored as |Delta log Z| in every input (asserted in
             # primary_fresh_view.jl), so the heatmap median equals abs_dlogZ.
@@ -159,12 +177,29 @@ function main()
             end
         end
     end
-    CSV.write(joinpath(FIGS_DIR, "heatmap_cell_values.csv"), DataFrame(check_rows))
+    check_df = DataFrame(check_rows)
+    check_path = joinpath(FIGS_DIR, "heatmap_cell_values.csv")
+    if ONLY_OFFDIM
+        # Refresh only the rows of the regenerated maps; every other row of the
+        # cross-check file (d = 5 maps) is kept byte-for-byte as loaded.
+        old = CSV.read(check_path, DataFrame)
+        keep_old = old[[!(d in OFFDIM_DIMS) for d in old.d], :]
+        check_df = vcat(keep_old, check_df; cols = :union)
+    end
+    CSV.write(check_path, check_df)
     n_grey_mw = count(r -> r.algorithm == "mw" && r.grey, check_rows)
     n_grey_mw_B5e3 = count(r -> r.algorithm == "mw" && r.grey && r.B == 5e3, check_rows)
     @info "heatmap cells cross-checked" n_cells = length(check_rows) n_grey_mw_cells = n_grey_mw n_grey_mw_cells_at_B5e3 = n_grey_mw_B5e3
     # At B = 5e3 every MW cell must be grey (no within-budget final sample).
     @assert all(r.grey for r in check_rows if r.algorithm == "mw" && r.B == 5e3)
+    # The dimension pairs must not contain a target that is outside the grid at
+    # that dimension (a grey row there would read as "no admissible run").
+    @assert !any(r.d in OFFDIM_DIMS && r.problem in ("shell", "mridges_spiky") for r in check_rows)
+
+    if ONLY_OFFDIM
+        @info "off-dimension heatmaps written (--only-offdim)" FIGS_DIR n_pdf
+        return 0
+    end
 
     # ---- dimension grids (W1 vs d), no line across a missing dimension ----------
     for Bdim in (5e4, 5e5)
